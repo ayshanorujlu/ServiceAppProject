@@ -1,0 +1,53 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1"
+              xmlns:viewModel="clr-namespace:projSchoolService.Presentation.ViewModels"
+             xmlns:view="clr-namespace:projSchoolService.Presentation.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <DataTemplate DataType = "{x:Type viewModel:CarViewModel}" >
+                <view:CarsView></view:CarsView>
+            </DataTemplate>
+
+            <DataTemplate DataType = "{x:Type viewModel:MainViewModel}" >
+                <view:MainWindow></view:MainWindow>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DriverViewModel}">
+                <view:DriversView></view:DriversView>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ClassViewModel}">
+                <view:ClassesView></view:ClassesView>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ParentViewModel}">
+                <view:ParentsView></view:ParentsView>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:StudentViewModel}">
+                <view:StudentsView></view:StudentsView>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:RideViewModel}">
+                <view:RidesView></view:RidesView>
+            </DataTemplate>
+
+
+            <DataTemplate DataType="{x:Type viewModel:RidesViewModel}">
+                <view:RidesView2></view:RidesView2>
+            </DataTemplate>
+
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

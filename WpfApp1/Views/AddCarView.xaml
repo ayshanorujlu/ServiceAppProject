@@ -1,0 +1,31 @@
+﻿<Window x:Class="projSchoolService.Presentation.Views.AddCarView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projSchoolService.Presentation.Views" xmlns:viewmodels="clr-namespace:projSchoolService.Presentation.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:AddCarViewModel}"
+        mc:Ignorable="d"
+        Title="AddCarView" 
+        Height="450" 
+        Width="800"
+        Background="Beige">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Foreground="Black" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontWeight="ExtraBlack"  FontStyle="Normal" >Add Car</Label>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Foreground="Black">Car Model</Label>
+                <TextBox Name="Name_txt" Text="{Binding AddCar.Name}" Width="450" FontSize="20" Foreground="Gray"></TextBox>
+            
+            <Label Foreground="Black">Seat Count</Label>
+                <TextBox Name="SeatCount_txt" Text="{Binding AddCar.SeatCount}" Width="450" FontSize="20" Foreground="Gray"></TextBox>
+                <Label Foreground="Black">Seria No of the Car</Label>
+                <TextBox Name="SeriaNo_txt" Text="{Binding AddCar.CarNumber}" Width="450" FontSize="20" Foreground="Gray"></TextBox>
+            </StackPanel>
+            <Button Grid.Row="2" Width="250" Command="{Binding CarCreateCommand}" Background="Black">Save</Button>
+
+        </Grid>
+</Window>
